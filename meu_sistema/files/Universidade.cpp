@@ -2,6 +2,7 @@
 
 Universidade::Universidade(const char n[])
 {
+    nome = (char*) malloc(sizeof(char) * (strlen(n)+1));
     strcpy(nome, n);
 }
 Universidade::~Universidade()

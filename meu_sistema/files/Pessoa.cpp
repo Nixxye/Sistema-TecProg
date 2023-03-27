@@ -1,7 +1,7 @@
 #include "../headers/Pessoa.h"
 
 Pessoa::Pessoa(const char nome[], int dia, int mes, int ano, int dia_atual, int mes_atual, int ano_atual):
-dia{dia}, mes{mes}, ano{ano}
+dia{dia}, mes{mes}, ano{ano}, p_universidade{NULL}
 {
     this->nome = (char *) malloc(sizeof(char) * (strlen(nome) + 1));
     strcpy(this->nome, nome);
@@ -15,8 +15,8 @@ Pessoa::~Pessoa()
 
 void Pessoa::calc_idade(int dia_atual, int mes_atual, int ano_atual)
 {
-    idade = 2023 - ano;
-    if (mes > 3 || (mes == 3 && dia > 26))
+    idade = ano_atual - ano;
+    if (mes > mes_atual || (mes == mes_atual && dia > dia_atual))
         idade--;
 }
 
