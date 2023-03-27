@@ -39,3 +39,8 @@ void Pessoa::inicializa(const char nome[], int dia, int mes, int ano, int dia_at
     strcpy(this->nome, nome);
     calc_idade(dia_atual, mes_atual, ano_atual);
 }
+
+void Pessoa::set_universidade(Universidade *universidade)
+{
+    p_universidade = universidade;
+}
