@@ -12,6 +12,9 @@ Principal::Principal()
     ano_atual = local->tm_year + 1900;
 
     jean.inicializa("Jean", 13, 10, 2003, dia_atual, mes_atual, ano_atual);
+    UTFPR.set_nome("UTFPR");
+    jean.set_universidade(&UTFPR);
+
     executar();
 }
 Principal::~Principal()
