@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/nix/Documents/GitHub/TecProg/meu_sistema",
-      "program": "/home/nix/Documents/GitHub/TecProg/meu_sistema/build/Debug/outDebug",
+      "cwd": "/home/nix/Documents/GitHub/TecProg/meu_sistema/files",
+      "program": "/home/nix/Documents/GitHub/TecProg/meu_sistema/files/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

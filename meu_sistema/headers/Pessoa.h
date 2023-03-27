@@ -21,5 +21,7 @@ public:
     void calc_idade(int dia_atual, int mes_atual, int ano_atual);
     void print();
     int get_idade();
+
     void set_universidade(Universidade *universidade);
+    void onde_trabalho();
 };

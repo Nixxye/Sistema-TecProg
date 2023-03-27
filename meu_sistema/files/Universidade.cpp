@@ -7,7 +7,7 @@ Universidade::Universidade(const char n[])
 }
 Universidade::~Universidade()
 {
-
+    free(nome);
 }
 void Universidade::set_nome(const char n[])
 {

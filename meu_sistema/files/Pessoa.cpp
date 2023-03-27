@@ -44,3 +44,8 @@ void Pessoa::set_universidade(Universidade *universidade)
 {
     p_universidade = universidade;
 }
+
+void Pessoa::onde_trabalho()
+{
+    std::cout << nome << " trabalha em " << p_universidade->get_nome() << std::endl;
+}
