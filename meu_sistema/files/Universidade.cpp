@@ -1,18 +1,35 @@
 #include "../headers/Universidade.h"
 
-Universidade::Universidade(const char n[])
+Universidade::Universidade(std::string n)
 {
+<<<<<<< Updated upstream
     strcpy(nome, n);
+=======
+    nome = n;
+>>>>>>> Stashed changes
 }
 Universidade::~Universidade()
 {
 
 }
-void Universidade::set_nome(const char n[])
+void Universidade::set_nome(std::string n)
 {
-    strcpy(nome, n);
+    nome = n;
 }
-char * Universidade::get_nome()
+std::string Universidade::get_nome()
 {
     return nome;
+}
+void Universidade::set_departamento(Departamento *departamento)
+{
+    departamentos.push_back(departamento);
+}
+
+void Universidade::imprime_departamentos()
+{
+    std::list<Departamento*>::iterator iterador;
+    for (iterador = departamentos.begin(); iterador != departamentos.end(); iterador++)
+    {
+        std::cout<<(*iterador)->get_nome() <<std::endl;
+    }
 }

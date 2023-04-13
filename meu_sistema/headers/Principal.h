@@ -1,14 +1,15 @@
 #pragma once
 
-#include "Pessoa.h"
-#include "Universidade.h"
+#include "../headers/Professor.h"
 #include <time.h>
 
 class Principal
 {
 private:
-    Pessoa jean;
+    Professor jean;
     Universidade UTFPR;
+    Departamento DAINF;
+
     int dia_atual;
     int mes_atual;
     int ano_atual;

@@ -1,14 +1,22 @@
 #pragma once
 
 #include <string.h>
-
+#include "../headers/Departamento.h"
+#include <list>
 class Universidade
 {
 private:
-    char *nome;
+    std::string nome;
+    //lista encadeada;
+    std::list<Departamento*> departamentos;
 public:  
-    Universidade(const char n[] = "");
+    Universidade(std::string n = "");
     ~Universidade();
-    void set_nome(const char n[] = "");
-    char* get_nome();
+
+    void set_nome(std::string n = "");
+
+    std::string get_nome();
+    void set_departamento(Departamento *departamento);
+    void imprime_departamentos();
+
 };

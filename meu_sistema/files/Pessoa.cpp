@@ -1,16 +1,19 @@
 #include "../headers/Pessoa.h"
 
+<<<<<<< Updated upstream
 Pessoa::Pessoa(const char nome[], int dia, int mes, int ano, int dia_atual, int mes_atual, int ano_atual):
+=======
+Pessoa::Pessoa(std::string n, int dia, int mes, int ano, int dia_atual, int mes_atual, int ano_atual):
+>>>>>>> Stashed changes
 dia{dia}, mes{mes}, ano{ano}
 {
-    this->nome = (char *) malloc(sizeof(char) * (strlen(nome) + 1));
-    strcpy(this->nome, nome);
+    nome = n;
     calc_idade(dia_atual, mes_atual, ano_atual);
 }
 
 Pessoa::~Pessoa()
 {
-    free(nome);
+    
 }
 
 void Pessoa::calc_idade(int dia_atual, int mes_atual, int ano_atual)
@@ -30,17 +33,26 @@ int Pessoa::get_idade()
     return idade;
 }
 
-void Pessoa::inicializa(const char nome[], int dia, int mes, int ano, int dia_atual, int mes_atual, int ano_atual)
+void Pessoa::inicializa(std::string n, int dia, int mes, int ano, int dia_atual, int mes_atual, int ano_atual)
 {
     this->dia = dia;
     this->mes = mes;
     this->ano = ano;
-    this->nome = (char *) malloc(sizeof(char) * (strlen(nome) + 1));
-    strcpy(this->nome, nome);
+    nome = n;
     calc_idade(dia_atual, mes_atual, ano_atual);
 }
 
-void Pessoa::set_universidade(Universidade *universidade)
+void Pessoa::set_nome(std::string n)
 {
+<<<<<<< Updated upstream
     p_universidade = universidade;
 }
+=======
+    nome = n;
+}
+
+std::string Pessoa::get_nome()
+{
+    return nome;
+}
+>>>>>>> Stashed changes
