@@ -2,11 +2,7 @@
 
 Universidade::Universidade(std::string n)
 {
-<<<<<<< Updated upstream
-    strcpy(nome, n);
-=======
     nome = n;
->>>>>>> Stashed changes
 }
 Universidade::~Universidade()
 {

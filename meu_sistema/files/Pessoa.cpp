@@ -1,10 +1,6 @@
 #include "../headers/Pessoa.h"
 
-<<<<<<< Updated upstream
-Pessoa::Pessoa(const char nome[], int dia, int mes, int ano, int dia_atual, int mes_atual, int ano_atual):
-=======
 Pessoa::Pessoa(std::string n, int dia, int mes, int ano, int dia_atual, int mes_atual, int ano_atual):
->>>>>>> Stashed changes
 dia{dia}, mes{mes}, ano{ano}
 {
     nome = n;
@@ -44,10 +40,6 @@ void Pessoa::inicializa(std::string n, int dia, int mes, int ano, int dia_atual,
 
 void Pessoa::set_nome(std::string n)
 {
-<<<<<<< Updated upstream
-    p_universidade = universidade;
-}
-=======
     nome = n;
 }
 
@@ -55,4 +47,3 @@ std::string Pessoa::get_nome()
 {
     return nome;
 }
->>>>>>> Stashed changes

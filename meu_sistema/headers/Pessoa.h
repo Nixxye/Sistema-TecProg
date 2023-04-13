@@ -21,11 +21,7 @@ public:
     void calc_idade(int dia_atual, int mes_atual, int ano_atual);
     void print();
     int get_idade();
-<<<<<<< Updated upstream
-    void set_universidade(Universidade *universidade);
-=======
 
     void set_nome(std::string n);
     std::string get_nome();
->>>>>>> Stashed changes
 };
