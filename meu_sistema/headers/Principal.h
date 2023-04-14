@@ -14,6 +14,9 @@ private:
     int dia_atual;
     int mes_atual;
     int ano_atual;
+    //falta lista universidades e departamentos - terminar quando for usar templates
+    ListaDisciplinas lista_disciplinas;
+    
 public:
     Principal();
     ~Principal();
@@ -33,4 +36,12 @@ public:
     void liste_alunos_disc();
 
     void executar();
+
+    void cad_discplina();
+    void cad_departamento();
+    void cad_universidade();
+
+    void menu();
+    void menu_cad();
+    void menu_exe();
 };

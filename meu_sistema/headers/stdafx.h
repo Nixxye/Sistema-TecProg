@@ -4,3 +4,6 @@
 #include "../headers/Pessoa.h"
 #include "../headers/Professor.h"
 #include "../headers/Universidade.h"
+#include "../headers/ELAluno.h"
+#include "../headers/ELDisciplina.h"
+#include "../headers/ListaDisciplinas.h"

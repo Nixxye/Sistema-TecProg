@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "../headers/ELAluno.h"
+#include "../headers/ListaAlunos.h"
 
 class Departamento;
 
@@ -12,19 +12,12 @@ private:
     std::string nome;
     std::string area_conhecimento;
 
-    int numero_alunos;
-    int cont_alunos;
-
-    ELAluno *primeiro_aluno;
-    ELAluno *aluno_atual;
-
     Departamento* departamento;
+
+    ListaAlunos lista;
 public:
     Disciplina(int na = 45, std::string ac = "");
     ~Disciplina();
-    
-    Disciplina* p_ant;
-    Disciplina* p_prox;
 
     void set_id(int i);
     int get_id();

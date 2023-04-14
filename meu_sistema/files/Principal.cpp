@@ -1,4 +1,5 @@
 #include "../headers/Principal.h"
+#include "Principal.h"
 
 Principal::Principal()
 {
@@ -82,6 +83,68 @@ void Principal::executar()
     liste_disc_deptos();
     liste_alunos_disc();
 
-
     liste_depto_por_universidade();
 }
+
+void Principal::cad_discplina()
+{
+
+}
+
+void Principal::menu()
+{
+    int op = -1;
+
+    while(op != 3)
+    {
+        system("cls");
+        std::cout<<" Informe sua opção:   "<<std::endl;
+        std::cout<<" 1 - Cadastrar.       "<<std::endl;
+        std::cout<<" 2 - Executar.        "<<std::endl;
+        std::cout<<" 3 - Sair.            "<<std::endl;
+        std::cin>>op;
+
+        switch(op)
+        {
+            case 1: {menu_cad();}
+            break;
+
+            case 2: {menu_exe();}
+            break;
+
+            case 3: {std::cout<<"Opção inválida."<<std::endl;}
+            getchar();
+            break;        
+        }
+    }
+}
+
+void Principal::menu_cad()
+{
+    int op = -1;
+    while ( op != 4 )
+    {
+        system ( "cls" ) ;
+        std::cout << " Informe sua opção: " << std::endl;
+        std::cout << " 1 - Cadastrar Disciplina." << std::endl;
+        std::cout << " 2 - Cadastrar Departamentos." << std::endl;
+        std::cout << " 3 - Cadastrar Universidade. " << std::endl;
+        std::cout << " 4 - Sair. " << std::endl;
+        std::cin >> op;
+        switch ( op )
+        {
+            case 1 : { cad_discplina(); }
+            break;
+            case 2: { cad_departamento(); }
+            break;
+            case 3: { cad_universidade(); }
+            break;
+            case 4: { std::cout << " FIM " << std::endl; }
+            break;
+            default: {
+            std::cout << "Opção Inválida." << std::endl;
+            getchar();}
+        }  
+    }
+}
+
