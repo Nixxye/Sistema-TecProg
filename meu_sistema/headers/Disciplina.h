@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "../headers/Aluno.h"
+#include "../headers/ELAluno.h"
 
 class Departamento;
 
@@ -15,8 +15,8 @@ private:
     int numero_alunos;
     int cont_alunos;
 
-    Aluno *primeiro_aluno;
-    Aluno *aluno_atual;
+    ELAluno *primeiro_aluno;
+    ELAluno *aluno_atual;
 
     Departamento* departamento;
 public:

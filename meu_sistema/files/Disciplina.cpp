@@ -16,6 +16,12 @@ Disciplina::Disciplina(int na, std::string ac)
 }
 Disciplina::~Disciplina()
 {
+    ELAluno *aux;
+    for (aux = primeiro_aluno, primeiro_aluno = primeiro_aluno->p_prox; primeiro_aluno != NULL; primeiro_aluno = primeiro_aluno->p_prox)
+    {
+        delete aux;
+        aux = primeiro_aluno;
+    }
     departamento = NULL;
     p_ant = NULL;
     p_prox = NULL;
@@ -54,18 +60,20 @@ Departamento *Disciplina::get_departamento()
 }
 void Disciplina::inclua_aluno(Aluno * al)
 {
+    ELAluno *aux = new ELAluno();
+    aux->set_aluno(al);
     if ( ( cont_alunos < numero_alunos ) && ( al != NULL ) )
     {
         if ( primeiro_aluno == NULL )
         {
-            primeiro_aluno = al;
-            aluno_atual = al;
+            primeiro_aluno = aux;
+            aluno_atual = aux;
         }
         else
         {
-            aluno_atual->p_prox = al;
-            al->p_ant = aluno_atual;
-            aluno_atual = al;
+            aluno_atual->p_prox = aux;
+            aux->p_ant = aluno_atual;
+            aluno_atual = aux;
         }
         cont_alunos++;
     }
@@ -77,7 +85,7 @@ void Disciplina::inclua_aluno(Aluno * al)
 
 void Disciplina::liste_alunos()
 {
-    Aluno* aux;
+    ELAluno* aux;
     aux = primeiro_aluno;
     while(aux != NULL)
     {
@@ -88,7 +96,7 @@ void Disciplina::liste_alunos()
 
 void Disciplina::liste_alunos2()
 {
-    Aluno* aux;
+    ELAluno* aux;
     aux = aluno_atual;
     while(aux != NULL)
     {
